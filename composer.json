@@ -1,6 +1,5 @@
 {
   "name": "omarelnaghy/laravel-ai-copilot",
-  "version": "0.1.0",
   "description": "Plug-and-play Laravel AI Copilot: unified AI API (OpenAI, Anthropic, Ollama)",
   "type": "library",
   "license": "MIT",
