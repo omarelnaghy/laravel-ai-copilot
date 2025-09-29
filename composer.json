@@ -1,0 +1,71 @@
+{
+  "name": "omarelnaghy/laravel-ai-copilot",
+  "version": "0.1.0",
+  "description": "Plug-and-play Laravel AI Copilot: unified AI API (OpenAI, Anthropic, Ollama)",
+  "type": "library",
+  "license": "MIT",
+  "keywords": [
+    "laravel",
+    "ai",
+    "openai",
+    "anthropic",
+    "ollama",
+    "llm",
+    "chatgpt",
+    "copilot"
+  ],
+  "homepage": "https://github.com/omarelnaghy/laravel-ai-copilot",
+  "support": {
+    "issues": "https://github.com/omarelnaghy/laravel-ai-copilot/issues"
+  },
+  "authors": [
+    {
+      "name": "Omar Elnaghy",
+      "email": "omarelnaghy53@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=8.2",
+    "illuminate/support": "^11.0",
+    "illuminate/http": "^11.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^9.0",
+    "pestphp/pest": "^2.34",
+    "pestphp/pest-plugin-laravel": "^2.4",
+    "phpstan/phpstan": "^1.11"
+  },
+  "autoload": {
+    "psr-4": {
+      "Omarelnaghy\\LaravelAICopilot\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Omarelnaghy\\LaravelAICopilot\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Omarelnaghy\\LaravelAICopilot\\Providers\\AIServiceProvider"
+      ],
+      "aliases": {
+        "AI": "Omarelnaghy\\LaravelAICopilot\\Facades\\AI"
+      }
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/pest -q",
+    "lint": "php -l src",
+    "phpstan": "vendor/bin/phpstan analyse src --level=max"
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  }
+}
